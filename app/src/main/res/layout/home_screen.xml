@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/list_view_match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/empty_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/empty_image_view"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="16dp"
+            android:text="@string/you_currently_have_no_matches_available"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="italic|bold"
+            app:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_image_view"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="16dp"
+            android:text="@string/start_by_adding_a_new_match"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="italic|bold"
+            app:fontFamily="sans-serif-medium" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_add_white_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp"
+        app:elevation="20dp" />
+
+</RelativeLayout>
+
